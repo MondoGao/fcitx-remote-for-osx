@@ -28,11 +28,11 @@
 #define ACTIVE_STR "2"
 
 #ifndef US_KEYBOARD_LAYOUT
-#define US_KEYBOARD_LAYOUT @"com.apple.keylayout.US"
+#define US_KEYBOARD_LAYOUT @"com.apple.keylayout.ABC"
 #endif
 
 #ifndef CHINESE_KEYBOARD_LAYOUT
-#define CHINESE_KEYBOARD_LAYOUT @"com.sogou.inputmethod.sogou.pinyin"
+#define CHINESE_KEYBOARD_LAYOUT @"com.logcg.inputmethod.LogInputMac2.LogInputMac2SP"
 #endif
 
 #define GENERAL_KEYBOARD_LAYOUT @"GENERAL"
@@ -58,7 +58,7 @@ void switch_to(NSString* imId){
         }
         // use ctrl-shift-z to change input method
         // slow but ensure to work
-        runScript(@"tell application \"System Events\" to keystroke \"z\" using {shift down, control down}");
+        runScript(@"tell application \"System Events\" to keystroke \"space\" using {option down, control down}");
         return;
 
         // faster but not reliable
